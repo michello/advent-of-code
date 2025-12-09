@@ -62,4 +62,4 @@ def solution():
             fresh_ingredients.append(digit)
     return len(fresh_ingredients)
 
-print(solution())
+print(solution())   # 640
