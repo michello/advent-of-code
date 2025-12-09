@@ -1,7 +1,5 @@
 import csv
 import os
-from collections import deque
-
 
 BASE_DIR = os.path.dirname(__file__)
 input_path = os.path.join(BASE_DIR, "input.csv")
@@ -34,8 +32,6 @@ def can_lift_roll(grid, row, col):
     
     return num_surrounding_rolls < 4
 
-
-
 def solution():
     grid = get_grid()
     num_rolls_accessible = 0
@@ -47,4 +43,4 @@ def solution():
                 num_rolls_accessible += 1
     return num_rolls_accessible
 
-print(solution())
+print(solution()) # 1537
