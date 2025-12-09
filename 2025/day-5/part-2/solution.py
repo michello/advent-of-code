@@ -35,22 +35,6 @@ def flatten_intervals(intervals):
             list_of_flattened_interval.append(interval)
     return list_of_flattened_interval
 
-def is_fresh_ingredient(digit, flattened_intervals):
-    lo, hi = 0, len(flattened_intervals) - 1
-
-    while (lo <= hi):
-        mid = lo + (hi - lo) // 2
-
-        interval = flattened_intervals[mid]
-
-        if digit >= interval[0] and digit <= interval[1]:
-            return True
-        elif digit > interval[0]:
-            lo = mid + 1
-        else:
-            hi = mid - 1
-    return False
-
 def solution():
     flattened_intervals = flatten_intervals(process_file())
     num_elems = 0
