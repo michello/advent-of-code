@@ -3,6 +3,11 @@ import os
 
 BASE_DIR = os.path.dirname(__file__)
 input_path = os.path.join(BASE_DIR, "input.csv")
+adjacent_cells = [
+    (-1, -1), (-1, 0), (-1, 1),
+    (0, -1), (0, 1), 
+    (1, -1), (1, 0), (1, 1)
+]
 
 def get_grid():
     grid = []
@@ -14,10 +19,6 @@ def get_grid():
     return grid
 
 def can_lift_roll(grid, row, col):
-    adjacent_cells = [(-1, -1), (-1, 0), (-1, 1),
-                       (0, -1), (0, 1), 
-                       (1, -1), (1, 0), (1, 1)
-    ]
     num_surrounding_rolls = 0
 
     for adjacent_cell_config in adjacent_cells:

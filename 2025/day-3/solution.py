@@ -34,7 +34,6 @@ def solution():
                     deque_of_nums.append(int_i)
 
                 elif deque_of_nums[1] < int_i:
-                    print("hello")
                     deque_of_nums.pop()
                     deque_of_nums.append(int_i)
 
